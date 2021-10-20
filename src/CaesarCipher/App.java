@@ -10,13 +10,13 @@ public class App {
     private static String fileHandler(String in){
 
         StringBuilder filein = new StringBuilder();
-        System.out.println("filein " + filein);
         try {
             File file = new File(in);
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String fileData = scanner.nextLine();
                 filein.append(fileData);
+                // to include space:
                 filein.append(System.lineSeparator());
             }
             scanner.close();
